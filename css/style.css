@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -359,6 +375,11 @@ template {
   margin: auto;
 }
 
+.block {
+  -webkit-animation: show 2s easy 2s infinite;
+          animation: show 2s easy 2s infinite;
+}
+
 .header {
   background-color: #131313;
   padding: 24px 0;
@@ -399,5 +420,6 @@ template {
 body {
   font-family: serif;
   font-size: 14px;
+  font-family: 'Futura Book', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
