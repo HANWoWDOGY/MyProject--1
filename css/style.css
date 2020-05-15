@@ -703,16 +703,16 @@ img {
   .hero {
     height: 533px;
     padding: 0; }
+    .hero__logo {
+      font-weight: 500;
+      font-size: 0.857rem;
+      line-height: 1rem; }
     .hero__title {
-      width: 24.21rem;
       font-weight: normal;
       font-size: 1.64rem;
       line-height: 132.83%;
-      margin-bottom: 1.14rem;
-      margin: 0;
       margin-bottom: 1.14rem; }
     .hero__text {
-      width: 22.9288rem;
       font-weight: normal;
       font-size: 1.285rem;
       line-height: 135.84%; }
@@ -720,19 +720,21 @@ img {
       display: none; }
     .hero__content {
       min-width: 22.86px;
-      margin: auto; }
+      margin: 0; }
     .hero__text {
       font-size: 1.29rem;
       margin-bottom: 2.28rem; }
     .hero__button {
       display: block;
       min-width: 22.86rem;
-      margin-bottom: 1.85rem; }
+      margin-bottom: 1.85rem;
+      width: 100%; }
   .contacts__button {
     display: none; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
-    text-decoration: none; }
-  .title {
-    font-size: 1.64rem; } }
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.857rem;
+    line-height: 1rem; } }
