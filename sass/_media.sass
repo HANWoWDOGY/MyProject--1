@@ -12,6 +12,16 @@
       display: none
     &__contetnt
       margin-left: 0
+@media screen and ( max-width: 760px )
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 5rem
+  .caed
+    &__text
+      margin-left: 0
 @media screen and ( max-width: 570px )
   .contacts
     &__phone
@@ -22,13 +32,16 @@
       display: none
   .title
     font-size: 1.64rem
+    min-width: 24.21rem
+    margin-top: 6.071rem
   .hero
     &__scroll-down
       display: none
     &__content
-      max-width: 22.86rem
+      min-width: 22.86px
     &__text
       font-size: 1.29rem
+      margin-bottom: 2.28rem
     &__button
       display: block
       min-width: 22.86rem
@@ -37,4 +50,38 @@
   .hero
     &__scroll-down
       display: none
+@media screen and ( max-width: 520px )
+  .hero
+    &__title
+      width: 24.21rem
+      font-weight: normal
+      font-size: 1.64rem
+      line-height: 132.83%
+      margin-bottom: 1.14rem
+    &__text
+      width: 22.9288rem
+      font-weight: normal
+      font-size: 1.285rem
+      line-height: 135.84%
+    &__scroll-down
+      display: none
+    &__content
+      min-width: 22.86px
+    &__text
+      font-size: 1.29rem
+      margin-bottom: 2.28rem
+    &__button
+      display: block
+      min-width: 22.86rem
+      margin-bottom: 1.85rem
+  .contacts
+    &__button
+      display: none
+    &__phone
+      margin-right: 0
+      color: $light
+      text-decoration: none
+  .title
+    font-size: 1.64rem
+
   
