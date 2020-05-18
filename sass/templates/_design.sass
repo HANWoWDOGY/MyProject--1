@@ -1,26 +1,31 @@
 .design
-  padding-bottom: 21rem
-  background-color: $dark
   &__section-title
-    color: $light
-    margin-bottom: 2.78rem
-  &__design
-    margin-bottom: 5.7rem
+    margin-bottom: 2rem
+.section-title
+  &__heading
+    font-weight: normal
+    font-size: 1.428rem
+  &__description
+    margin: auto
+    margin-top: 1.64rem
+    font-size: 1.428rem
+    line-height: 135.84%
+    max-width: 52.9rem
+.row
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
 .col
-  flex-basis: 32%
+  flex-basis: 33%
 .card
-  margin-bottom: 5.7rem
-  &__image
-    display: flex
-    width: 100%
   &__text
     position: relative
     margin: 0 auto
     margin-top: -9.3rem
-    max-width: 23.6rem
     padding: 1.79rem 2.14rem
-    background-color: #ffffff
+    max-width: 23.6rem
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+    background-color: $light
   &__title
     font-weight: normal
     font-family: 'Yeseva One', cursive
@@ -28,13 +33,13 @@
     margin-top: 0
     margin-bottom: 0.7rem
   &__list
-    padding: 0 0 0 1.2rem
+    padding: 0 0 0 1rem
     margin: 0
     font-size: 1.07rem
     line-height: 1.79rem
     color: $secondary
     margin-bottom: 2.5rem
-  &__pricetag
+  &__priceteg
     position: absolute
     left: 0
     bottom: -1.79rem
@@ -43,7 +48,4 @@
     text-transform: uppercase
     background-color: $primary
     color: $light
-    padding: 1.214rem 1.6rem
-.row
-  display: flex
-  flex-direction: column
+    padding: 1.214rem 2.6rem

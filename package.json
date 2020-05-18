@@ -22,6 +22,7 @@
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "jslint": "^0.12.1"
   }
 }

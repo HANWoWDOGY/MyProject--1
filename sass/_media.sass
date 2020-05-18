@@ -5,6 +5,21 @@
     &__item
       margin-right: 1rem
 @media screen and ( max-width: 992px )
+  .mobile-order-top
+    order: 0
+  .col-50
+    width: 100%
+  .row
+    flex-direction: column
+    align-items: center
+  .swiper-button-prev
+    left: 20%
+  .swiper-button-next 
+    left: auto !important
+    right: 20%
+  .swiper-pagination-bullets 
+    left: 50% !important
+    transform: translateX(-50%) !important
   .nav
     display: none
   .hero
@@ -19,10 +34,34 @@
   .types
     &__card
       margin-bottom: 5rem
-  .caed
+  .design
+    background-color: $dark
+    &__section-title
+      color: $light
+    &__card
+      margin-bottom: 5rem
+  .card
     &__text
       margin-left: 0
 @media screen and ( max-width: 570px )
+  .hero
+    &::after
+      display: none
+  .section
+    &-title
+      &__word
+        &::after
+          content: ''
+          display: none
+      &__heading
+        font-weight: normal
+        font-size: 1.571rem
+        line-height: 138.6%
+      &__text
+        font-weight: normal
+        font-size: 1rem
+        line-height: 158.48%
+        max-width: 21.785rem
   .contacts
     &__phone
       margin-right: 0
@@ -46,6 +85,37 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+@media screen and ( max-width: 570px )
+  .section
+    &-title
+      &__word
+        &::after
+          content: ''
+          display: none
+      &__heading
+        font-weight: normal
+        font-size: 1.571rem
+        line-height: 138.6%
+      &__text
+        font-weight: normal
+        font-size: 1rem
+        line-height: 158.48%
+        max-width: 21.785rem
+  .swiper
+    &-slide
+      &__heading
+        font-weight: normal
+        font-size: 1rem
+        line-height: 138.6%
+      &__value
+        font-weight: normal
+        font-size: 1rem
+        line-height: 135.84%
+        margin-bottom: 1.928rem
+    &-slider
+      &-image
+        margin-top: 2.571rem
+        max-width: 24.28rem
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
