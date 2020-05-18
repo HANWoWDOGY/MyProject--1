@@ -809,7 +809,9 @@ img {
   .hero__instagram {
     display: none; }
   .hero__contetnt {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .types__card {
+    margin-bottom: 5rem; } }
 
 @media screen and (max-width: 760px) {
   .row {
@@ -824,7 +826,23 @@ img {
     .design__card {
       margin-bottom: 5rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .hero__title {
+    font-size: 1.64rem;
+    max-width: 20rem;
+    margin-top: 6.071rem;
+    line-height: 132.83%; }
+  .hero__scroll-down {
+    display: none; }
+  .hero__content {
+    min-width: 22.86px; }
+  .hero__text {
+    font-size: 1.29rem;
+    margin-bottom: 2.28rem; }
+  .hero__button {
+    display: block;
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem; } }
 
 @media screen and (max-width: 570px) {
   .hero::after {
