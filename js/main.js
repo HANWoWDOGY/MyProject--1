@@ -222,14 +222,14 @@ function init () {
   // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
   myMapTemp.behaviors.disable('scrollZoom');
   var layer = myMapTemp.layers.get(0).get(0);
- 
+
   // Решение по callback-у для определения полной загрузки карты
   waitForTilesLoad(layer).then(function() {
     // Скрываем индикатор загрузки после полной загрузки карты
     spinner.removeClass('is-active');
   });
 }
- 
+
 // Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
 function waitForTilesLoad(layer) {
   return new ymaps.vow.Promise(function (resolve, reject) {
@@ -248,7 +248,7 @@ function waitForTilesLoad(layer) {
     }
   });
 }
- 
+
 function getTileContainer(layer) {
   for (var k in layer) {
     if (layer.hasOwnProperty(k)) {
@@ -262,11 +262,11 @@ function getTileContainer(layer) {
   }
   return null;
 }
- 
+
 // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
 function loadScript(url, callback){
   var script = document.createElement("script");
- 
+
   if (script.readyState){  // IE
     script.onreadystatechange = function(){
       if (script.readyState == "loaded" ||
@@ -280,23 +280,23 @@ function loadScript(url, callback){
       callback();
     };
   }
- 
+
   script.src = url;
   document.getElementsByTagName("head")[0].appendChild(script);
 }
- 
+
 // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
 var ymap = function() {
   $('.ymap-container').mouseenter(function(){
       if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
- 
-	  	// Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+
+// Чтобы не было повторной загрузки карты, мы изменяем значение переменной
         check_if_load = true; 
- 
-		// Показываем индикатор загрузки до тех пор, пока карта не загрузится
+
+// Показываем индикатор загрузки до тех пор, пока карта не загрузится
         spinner.addClass('is-active');
- 
-		// Загружаем API Яндекс.Карт
+
+// Загружаем API Яндекс.Карт
         loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
            // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
            ymaps.load(init);

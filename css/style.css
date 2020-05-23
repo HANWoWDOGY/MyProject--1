@@ -751,6 +751,7 @@ img {
   font-size: 1.071rem; }
 
 .control__policy {
+  order: 5;
   flex-basis: 100%;
   margin-top: 1.2rem; }
   .control__policy-label {
@@ -1111,12 +1112,14 @@ img {
         color: #ffffff; }
     .control__policy {
       margin-top: -4rem;
-      margin-left: 0; }
+      order: 0;
+      margin-bottom: 3.43rem; }
       .control__policy-label {
-        left: 0;
+        justify-content: end;
         color: #ffffff;
         font-size: 16px;
-        line-height: 22px; }
+        line-height: 22px;
+        margin-bottom: 4.428rem; }
   .video__play {
     width: 100px; } }
 
@@ -1187,8 +1190,8 @@ img {
       width: 340px;
       font-size: 15px;
       text-align: center; }
-    .footer__policy {
-      margin-left: 0; }
+    .footer__policy-label {
+      justify-content: end; }
     .footer-card {
       order: 1;
       margin: auto; }
@@ -1202,12 +1205,12 @@ img {
     padding-top: 40px;
     padding-bottom: 0; }
   .control {
-    padding-bottom: 20px; }
+    padding-bottom: 23px; }
   .design {
     padding-top: 20px;
     padding-bottom: 15rem; }
   .projects {
-    padding-bottom: 28rem; }
+    padding-bottom: 25rem; }
   .slider {
     padding-top: 20px; } }
 
@@ -1271,8 +1274,8 @@ img {
     line-height: 135.84%;
     margin-bottom: 1.928rem; }
   .swiper-slider-image {
-    margin-top: 2.571rem;
-    max-width: 24.28rem; } }
+    max-width: 24.28rem;
+    margin-top: 2.571rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
