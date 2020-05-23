@@ -948,7 +948,8 @@ img {
   .footer__map {
     background: url(../img/map.png) center no-repeat/cover;
     max-width: 66.07rem;
-    height: 465px; }
+    height: 465px;
+    width: 100%; }
 
 .modal {
   opacity: 0;

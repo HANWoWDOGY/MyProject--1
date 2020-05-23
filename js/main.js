@@ -60,7 +60,8 @@ $(document).ready(function () {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: {
         required: true,
@@ -108,7 +109,8 @@ $(document).ready(function () {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: {
         required: true,
@@ -156,7 +158,8 @@ $(document).ready(function () {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: {
         required: true,
@@ -196,7 +199,7 @@ var spinner = $('.ymap-container').children('.loader');
 var check_if_load = false;
 //Необходимые переменные для того, чтобы задать координаты на Яндекс.Карте
 var myMapTemp, myPlacemarkTemp;
- 
+
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
 function init () {
   var myMapTemp = new ymaps.Map("map-yandex", {
@@ -291,7 +294,7 @@ var ymap = function() {
       if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
 
 // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
-        check_if_load = true; 
+        check_if_load = true;
 
 // Показываем индикатор загрузки до тех пор, пока карта не загрузится
         spinner.addClass('is-active');
