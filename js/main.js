@@ -47,4 +47,144 @@ $(document).ready(function () {
 
   new WOW().init();
 
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+       error.insertAfter($(element));
+  },
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 17
+      },
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      },
+      policy: {
+        required: true,
+      }
+    },
+    messages: {
+      userName: {
+        required: "Укажите ваше имя",
+        minlength: "Имя не менее двух букв"
+      },
+      userPhone: {
+        required: "Укажите ваш номер",
+        minlength: "Неправильный номер телефона"
+      },
+      userEmail: {
+        required: "Укажите ваш email ",
+        email: "Пример: name@domain.com"
+      },
+      policy: {
+        required: "Согласитесь с обработкой данных",
+      }
+    },
+
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+       error.insertAfter($(element));
+  },
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 17
+      },
+      // compound rule
+      userQuestion: {
+        required: true,
+        minlength: 20
+      },
+      policy: {
+        required: true,
+      }
+    },
+    messages: {
+      userName: {
+        required: "Укажите ваше имя",
+        minlength: "Имя не менее двух букв"
+      },
+      userPhone: {
+        required: "Укажите ваш номер",
+        minlength: "Неправильный номер телефона"
+      },
+      userQuestion: {
+        required: "Укажите ваш вопрос ",
+        minlength: "Введите не менее 20 символов"
+      },
+      policy: {
+        required: "Согласитесь с обработкой данных",
+      }
+    },
+
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+          return element.next('label').append(error);
+      }
+       error.insertAfter($(element));
+  },
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 17
+      },
+      // compound rule
+      policy: {
+        required: true,
+      }
+    },
+    messages: {
+      userName: {
+        required: "Укажите ваше имя",
+        minlength: "Имя не менее двух букв"
+      },
+      userPhone: {
+        required: "Укажите ваш номер",
+        minlength: "Неправильный номер телефона"
+      },
+        minlength: "Неверный номер телефона",
+      policy: {
+        required: "Согласитесь с обработкой данных",
+      }
+    },
+
+  });
+
+  //маска для телефона
+
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: 'Ваш номер телефона:'});
 });
