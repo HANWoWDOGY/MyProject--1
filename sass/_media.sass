@@ -46,6 +46,12 @@
   .card
     &__text
       margin-left: 0
+  .form
+    &__label
+      font-size: 15px
+    &__input
+      font-size: 18px
+      border-color: $light
   .hero
     &__title
       font-size: 1.64rem
@@ -105,11 +111,89 @@
     &__play
       width: 100px
 @media screen and ( max-width: 760px )
+  #map-yandex
+    width: 100%
+    height: 100%
+    cursor: pointer
+    background-color: transparent
+    background: url('../img/map.png') center/cover
+    margin: auto
+    max-width: 340px
+    min-height: 255px
+  #policy-error
+    bottom: -16px
+  #user-name-error
+    bottom: -5px
+  #user-phone-error
+    bottom: -5px
+  #user-name-footer-error
+    bottom: -17px
+  #user-phone-footer-error
+    bottom: -17px
+  #user-question-error
+    bottom: -17px
+  #policy-error
+    bottom: -20px
+  #user-name-error
+    bottom: -16px
+  #user-phone-error
+    bottom: -16px
+  #user-name-modal-error
+    bottom: -5px
+  #user-phone-modal-error
+    bottom: -5px
+  #user-email-error
+    bottom: -5px
+  div.invalid
+    bottom: -18px
+@media screen and ( max-width: 760px )
+  .footer
+    background: $dark
+    &__input-group
+      flex-basis: 100%
+    &__wrap
+      background: $dark
+      padding: 0
+    &__document
+      padding-bottom: 0
+    &__contact
+      order: 1
+      text-align: center
+      margin-top: 2rem
+      font-size: 18px
+      font-weight: normal
+    &__number
+      display: block
+    &__number:hover 
+      background: rgba(0,0,0,0)
+      color: #3a7999
+    &__menu
+      display: none
+    &__title
+      margin-top: 2rem
+      font-size: 20px
+    &__button
+      width: 340px
+      font-size: 15px
+      text-align: center
+    &__policy
+      margin-left: 0
+    &-card
+      order: 1
+      margin: auto
+    &-link
+      margin-top: 1.71rem
+      margin-bottom: 1.71em
+      margin-right: 1.5rem
+@media screen and ( max-width: 760px )
   .types
     padding-top: 40px
     padding-bottom: 0
+  .control
+    padding-bottom: 20px
   .design
     padding-top: 20px
+    padding-bottom: 15rem
   .projects
     padding-bottom: 28rem
   .slider
