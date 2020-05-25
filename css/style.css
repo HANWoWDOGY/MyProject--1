@@ -492,13 +492,11 @@ img {
   bottom: -12px; }
 
 #map-yandex {
-  width: 100%;
-  height: 100%;
   cursor: pointer;
   background-color: transparent;
   background: url("../img/map.png") center/cover;
   margin: auto;
-  max-width: 925px;
+  max-width: 66.07rem;
   min-height: 465px; }
 
 .header {
@@ -945,11 +943,6 @@ img {
   .footer__number:hover {
     background: rgba(0, 0, 0, 0);
     color: #3a7999; }
-  .footer__map {
-    background: url(../img/map.png) center no-repeat/cover;
-    max-width: 66.07rem;
-    height: 465px;
-    width: 100%; }
 
 .modal {
   opacity: 0;

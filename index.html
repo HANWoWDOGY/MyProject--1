@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -17,12 +18,12 @@
       <div class="menu">
         <div class="logo menu__logo  wow fadeInLeft">Repair Design Project</div>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">ПРоекты</a>
-          <a href="#" class="nav__item">ЗАМЕР</a>
-          <a href="#" class="nav__item">Команда</a>
-          <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#part1" class="nav__item">Главная</a>
+          <a href="#part2" class="nav__item">Проекты</a>
+          <a href="#part3" class="nav__item">ЗАМЕР</a>
+          <a href="#part4" class="nav__item">Команда</a>
+          <a href="#part5" class="nav__item">Отзывы</a>
+          <a href="#part6" class="nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -51,7 +52,7 @@
         </div>
         <!-- /.container -->
       </div>
-      <a href="" class="hero__scroll-down  wow fadeInLeft">листайте вниз</a>
+      <a href="#part2" class="hero__scroll-down  wow fadeInLeft">листайте вниз</a>
     </section>
     <section class="section section--dark projects">
       <div class="container">
@@ -170,7 +171,7 @@
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В
           любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую
           трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-        <form action="#" class="form control__form">
+        <form action="send.php" method="POST" class="form control__form">
           <div class="control__input-group">
             <label for="user-name" class="label form__label control__label">Имя</label>
             <input type="text" name="userName" class="input form__input control__input" id="user-name"
@@ -429,7 +430,6 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="/path/to/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>

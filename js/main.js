@@ -94,6 +94,22 @@ $(document).ready(function () {
       }
     },
 
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log("Ajax сработал. Ответ сервера: " + response);
+          alert("Форма отправлена,мы свяжемся с вами чуть позже");
+          $(form)[0].reset();
+          modal.removeClass("modal--visible");
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        }
+      });
+    }
   });
 
   $('.footer__form').validate({
@@ -142,7 +158,21 @@ $(document).ready(function () {
         required: "Согласитесь с обработкой данных",
       }
     },
-
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log("Ajax сработал. Ответ сервера: " + response);
+          alert("Форма отправлена,мы свяжемся с вами чуть позже");
+          $(form)[0].reset();
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        }
+      });
+    }
   });
 
   $('.control__form').validate({
@@ -184,7 +214,21 @@ $(document).ready(function () {
         required: "Согласитесь с обработкой данных",
       }
     },
-
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log("Ajax сработал. Ответ сервера: " + response);
+          alert("Форма отправлена,мы свяжемся с вами чуть позже");
+          $(form)[0].reset();
+        },
+        error: function (response) {
+          console.error("Ошибка запроса " + response);
+        }
+      });
+    }
   });
 
   //маска для телефона
