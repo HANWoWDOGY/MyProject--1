@@ -79,7 +79,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Укажите ваше имя",
-        minlength: "Имя не менее двух букв"
+        minlength: "Имя не менее двух букв",
+        maxlength: "Имя не больше 15 букв"
       },
       userPhone: {
         required: "Укажите ваш номер",
@@ -100,8 +101,6 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log("Ajax сработал. Ответ сервера: " + response);
-          alert("Форма отправлена,мы свяжемся с вами чуть позже");
           $(form)[0].reset();
           modal.removeClass("modal--visible");
         },
@@ -144,7 +143,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Укажите ваше имя",
-        minlength: "Имя не менее двух букв"
+        minlength: "Имя не менее двух букв",
+        maxlength: "Имя не больше 15 букв"
       },
       userPhone: {
         required: "Укажите ваш номер",
@@ -164,8 +164,6 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log("Ajax сработал. Ответ сервера: " + response);
-          alert("Форма отправлена,мы свяжемся с вами чуть позже");
           $(form)[0].reset();
         },
         error: function (response) {
@@ -203,7 +201,8 @@ $(document).ready(function () {
     messages: {
       userName: {
         required: "Укажите ваше имя",
-        minlength: "Имя не менее двух букв"
+        minlength: "Имя не менее двух букв",
+        maxlength: "Имя не больше 15 букв"
       },
       userPhone: {
         required: "Укажите ваш номер",
@@ -220,8 +219,6 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log("Ajax сработал. Ответ сервера: " + response);
-          alert("Форма отправлена,мы свяжемся с вами чуть позже");
           $(form)[0].reset();
         },
         error: function (response) {
@@ -235,6 +232,21 @@ $(document).ready(function () {
 
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: 'Ваш номер телефона:'});
 
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    var player;
+    player = new YT.Player('player', {
+      height: '434',
+      width: '100%',
+      videoId: 'z93wlhvEY4g',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 });
 
 //Переменная для включения/отключения индикатора загрузки

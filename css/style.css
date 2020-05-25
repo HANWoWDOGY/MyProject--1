@@ -422,7 +422,8 @@ div.invalid {
   outline: none; }
 
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  outline: none !important; }
 
 body {
   font-family: serif;
@@ -494,9 +495,9 @@ img {
 #map-yandex {
   cursor: pointer;
   background-color: transparent;
-  background: url("../img/map.png") center/cover;
+  background: url("../img/map.png") center;
   margin: auto;
-  max-width: 66.07rem;
+  max-width: 925px;
   min-height: 465px; }
 
 .header {
@@ -998,6 +999,11 @@ img {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
+  .modal__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 13px; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -1123,7 +1129,7 @@ img {
     height: 100%;
     cursor: pointer;
     background-color: transparent;
-    background: url("../img/map.png") center/cover;
+    background: url("../img/map.png") center;
     margin: auto;
     max-width: 340px;
     min-height: 255px; }

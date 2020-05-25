@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="../img/MyProject--1/favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -16,7 +16,7 @@
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo  wow fadeInLeft">Repair Design Project</div>
+        <div class="logo menu__logo">Repair Design Project</div>
         <nav class="nav menu__nav">
           <a href="#part1" class="nav__item">Главная</a>
           <a href="#part2" class="nav__item">Проекты</a>
@@ -35,26 +35,26 @@
     <!-- /.container -->
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" id="part1">
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title wow fadeInLeft">Турецкий ремонт в&nbsp;<span
+          <h1 class="title hero__title">Турецкий ремонт в&nbsp;<span
               class="title--primary">Ростове-на-дону</span></h1>
-          <p class="hero__text wow fadeInLeft">Получите готовый ремонт под ключ в срок с экономией рабочего времени до
+          <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до
             45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <button class="button hero__button button--primary wow fadeInLeft" data-toggle="modal">Рассчитать
+          <button class="button hero__button button--primary" data-toggle="modal">Рассчитать
             стоимость</button>
-          <button class="button hero__button button--outline wow fadeInLeft" data-toggle="modal">Отправить
+          <button class="button hero__button button--outline" data-toggle="modal">Отправить
             заявку</button>
         </div>
         <!-- /.container -->
       </div>
-      <a href="#part2" class="hero__scroll-down  wow fadeInLeft">листайте вниз</a>
+      <a href="#" class="hero__scroll-down">листайте вниз</a>
     </section>
-    <section class="section section--dark projects">
+    <section class="section section--dark projects" id="part2">
       <div class="container">
         <div class="row">
           <div class="col-50">
@@ -157,7 +157,7 @@
         <!-- /.container -->
       </div>
     </section>
-    <section class="section control">
+    <section class="section control" id="part3">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
           <h2 class="section-title__heading">онлайн контроль</h2>
@@ -165,7 +165,8 @@
             <img src="img/camera.svg" alt="камера">
           </div>
         </div>
-        <div class="control__video">
+        <div class="control__video" id="player">
+          <script src="https://www.youtube.com/iframe_api"></script>
           <img src="img/play-icon.svg" alt="" class="video__play">
         </div>
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В
@@ -190,7 +191,7 @@
         </form>
       </div>
     </section>
-    <section class="section types">
+    <section class="section types" id="part4">
       <div class="container">
         <div class="section-title types__section-title">
           <h2 class="section-title__heading">Виды ремонта</h2>
@@ -256,7 +257,7 @@
         </div>
       </div>
     </section>
-    <section class="section design">
+    <section class="section design" id="part5">
       <div class="container">
         <div class="section-title design__section-title fadeInUp">
           <h2 class="section-title__heading">Дизайн проект</h2>
@@ -328,7 +329,7 @@
 
     </section>
   </main>
-  <footer class="footer section--dark">
+  <footer class="footer section--dark" id="part6">
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
@@ -358,7 +359,7 @@
       </div>
       <div class="footer__document">
         <strong class="footer__contact">
-          Ростов на дону, Торговый центр Plaza <span class="footer__phone">Прямой телефон <a href="#"
+          Ростов на дону, Торговый центр Plaza <span class="footer__phone">Прямой телефон <a href="+79997683299"
               class="footer__number"> +7 (999) 768 32 99</a></span>
         </strong>
         <div class="footer-card">
