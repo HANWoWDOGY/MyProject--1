@@ -1,29 +1,33 @@
-/*
-document.addEventListener("DOMContentLoaded", function(event) { 
-  const modal = document.querySelector(".modal");
-  const modalBtn = document.querySelectorAll("[data-toggle=modal");
-  const closeBtn = document.querySelector(".modal__close")
-  const swichModal = () => {
-    modal.classList.toggle("modal--visible");
-  }
-  modalBtn.forEach(element => {
-    element.addEventListener("click", swichModal);
+
+$(document).ready(() => {
+  var modal = $('.modal'),
+    modalSuccess = $('.modal-success'),
+    modalBtn = $('[data-toggle="modal"]'),
+    closeBtn = $('.modal__close'),
+    closeBtnSuccess = $('.modal-success__close');
+
+  modalBtn.on('click', () => {
+    modal.toggleClass('modal--visible');
   });
 
-  closeBtn.addEventListener("click", swichModal);
-
-});
-*/
-$(document).ready(function () {
-  var modal = $(".modal"),
-      modalBtn = $("[data-toggle=modal]"),
-      closeBtn = $(".modal__close");
-
-  modalBtn.on("click", function () {
-    modal.toggleClass("modal--visible");
+  closeBtnSuccess.on('click', () => {
+    modalSuccess.toggleClass('modal-success--visible');
   });
-  closeBtn.on("click", function () {
-    modal.toggleClass("modal--visible");
+
+  closeBtn.on('click', () => {
+    modal.toggleClass('modal--visible');
+  });
+
+  $(document).on('keydown', (event) => {
+    if (event.key === 'Escape')
+      modal.removeClass('modal--visible');
+  });
+
+  $(document).on('click', (event) => {
+    let target = event.target;
+
+    if ($(target).hasClass('modal--visible'))
+      modal.toggleClass('modal--visible');
   });
 
   var mySwiper = new Swiper ('.swiper-container', {
@@ -102,14 +106,13 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          modal.removeClass("modal--visible");
-        },
-        error: function (response) {
-          console.error("Ошибка запроса " + response);
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
         }
       });
     }
-  });
+  })
 
   $('.footer__form').validate({
     errorClass: "invalid",
