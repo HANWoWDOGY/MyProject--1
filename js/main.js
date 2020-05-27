@@ -102,7 +102,7 @@ $(document).ready(() => {
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
-        url: "/send.php",
+        url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
