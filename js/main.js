@@ -84,8 +84,8 @@ $(document).ready(function(){
   var prev = $(".swiper-button-prev");
   var bullets = $(".swiper-pagination");
 
-  next.css("left", prev.width() + 26 + bullets.width() + 26)
-  bullets.css("left", prev.width() + 26)
+  next.css("left", prev.width() + 27 + bullets.width() + 27)
+  bullets.css("left", prev.width() + 27)
 
   new WOW().init();
 
@@ -263,14 +263,13 @@ $(document).ready(function(){
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-        },
-        error: function (response) {
-          console.error("Ошибка запроса " + response);
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
         }
       });
     }
-  });
-
+  })
   //маска для телефона
 
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: 'Ваш номер телефона:'});

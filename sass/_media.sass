@@ -13,14 +13,6 @@
   .row
     flex-direction: column
     align-items: center
-  .swiper-button-prev
-    left: 20%
-  .swiper-button-next 
-    left: auto !important
-    right: 20%
-  .swiper-pagination-bullets 
-    left: 50% !important
-    transform: translateX(-50%) !important
   .nav
     display: none
   .hero
@@ -169,9 +161,8 @@
       font-size: 1.285rem
     &__number
       display: block
-    &__number:hover 
-      background: rgba(0,0,0,0)
-      color: #3a7999
+      &:hover
+        display: none
     &__menu
       display: none
     &__title
@@ -187,6 +178,8 @@
     &-card
       order: 1
       margin: auto
+      &:hover
+        display: none
     &-link
       margin-top: 1.71rem
       margin-bottom: 1.71em
@@ -229,8 +222,16 @@
       margin-right: 0
       color: $light
       text-decoration: none
+      &:hover
+        display: none
     &__button
       display: none
+      &:hover
+        display: none
+  .menu
+    &__logo
+      &:hover
+        display: none
   .title
     font-size: 1.64rem
     min-width: 24.21rem
@@ -247,6 +248,8 @@
       display: block
       min-width: 22.86rem
       margin-bottom: 1.85rem
+      &:hover
+        display: none
 @media screen and ( max-width: 570px )
   .section
     &__topic
@@ -267,20 +270,32 @@
         line-height: 158.48%
         max-width: 21.785rem
   .swiper
+    &-container
+      width: 28rem
+      margin-bottom: 3.64rem
+    &-slider
+      width: 100%
     &-slide
+      display: flex
+      flex-wrap: wrap
       &__heading
         font-weight: normal
         font-size: 1rem
         line-height: 138.6%
+      &__text
+        font-size: 1rem
+        line-height: 135.84%
+        margin-right: 4rem
       &__value
         font-weight: normal
         font-size: 1rem
         line-height: 135.84%
         margin-bottom: 1.928rem
+        &:last-of-type
+          margin-bottom: 3.14rem
     &-slider
       &-image
         max-width: 24.28rem
-        margin-top: 2.571rem
 @media screen and ( max-width: 520px )
   .hero
     height: 533px
@@ -337,8 +352,8 @@
       position: absolute
       right: 0
       top: 0
-      width: 1.5rem
-      height: 1.5rem
+      width: 2rem
+      height: 2rem
       background: transparent url("../img/close.svg") no-repeat center
       border: none
       margin: 12px
@@ -370,4 +385,3 @@
     bottom: -3px
   #policy-error
     bottom: -17px
-  

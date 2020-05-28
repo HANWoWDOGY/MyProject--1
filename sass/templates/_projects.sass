@@ -1,14 +1,19 @@
 .projects
   padding-bottom: 30rem
 .swiper
+  &-container
+    width: 48.5rem
+  &-slider
+    margin-top: 1.8rem
+    width: 100%
   &-slide
     display: flex
     flex-wrap: wrap
-    margin-bottom: 6.14rem
-    margin-top: 1rem
     &__text
       flex-basis: 34%
-      padding-bottom: 1.27rem
+      margin-bottom: 1.4rem
+      &:last-of-type
+        margin-bottom: 7.14rem
     &__heading
       font-weight: normal
       font-size: 1.28rem
@@ -20,8 +25,10 @@
     &__value
       font-size: 1.071rem
       line-height: 1.428rem
+      margin-bottom: 2.428em
   &-pagination
     &-bullet
+      margin: 0 7px !important
       width: 10px
       height: 10px
       background-color: rgba($light, 0.3)
