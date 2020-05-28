@@ -30,6 +30,44 @@ $(document).ready(() => {
       modal.toggleClass('modal--visible');
   });
 
+$(document).ready(function(){
+  $("#menu").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
+$(document).ready(function(){
+  $("#menu2").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
+(function($) {
+  $(function() {
+
+    $('#up').click(function() {
+      $('body,html').animate({scrollTop:0},1500);
+      return false;
+    })
+
+  })
+  })(jQuery)
+
+$(document).ready(function(){
+  $("#scrolldown").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
   var mySwiper = new Swiper ('.swiper-container', {
     loop: true,
     pagination: {
@@ -46,8 +84,8 @@ $(document).ready(() => {
   var prev = $(".swiper-button-prev");
   var bullets = $(".swiper-pagination");
 
-  next.css("left", prev.width() + 10 + bullets.width() + 10)
-  bullets.css("left", prev.width() + 10)
+  next.css("left", prev.width() + 26 + bullets.width() + 26)
+  bullets.css("left", prev.width() + 26)
 
   new WOW().init();
 
@@ -161,6 +199,7 @@ $(document).ready(() => {
         required: "Согласитесь с обработкой данных",
       }
     },
+
     submitHandler: function(form) {
       $.ajax({
         type: "POST",
@@ -168,13 +207,13 @@ $(document).ready(() => {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-        },
-        error: function (response) {
-          console.error("Ошибка запроса " + response);
+          modal.removeClass('modal--visible');
+          console.log(modalSuccess);
+          modalSuccess.toggleClass('modal-success--visible');
         }
       });
     }
-  });
+  })
 
   $('.control__form').validate({
     errorClass: "invalid",
@@ -216,6 +255,7 @@ $(document).ready(() => {
         required: "Согласитесь с обработкой данных",
       }
     },
+
     submitHandler: function(form) {
       $.ajax({
         type: "POST",

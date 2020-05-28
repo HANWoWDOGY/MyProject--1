@@ -1,4 +1,5 @@
-@media screen and ( max-width: 1200px )
+
+@media screen and ( max-width: 1300px )
   html
     font-size: 12px
   .nav
@@ -149,6 +150,9 @@
   div.invalid
     bottom: -18px
 @media screen and ( max-width: 760px )
+  .button
+    &-top
+      display: none
   .footer
     background: $dark
     &__input-group
@@ -162,8 +166,7 @@
       order: 1
       text-align: center
       margin-top: 2rem
-      font-size: 18px
-      font-weight: normal
+      font-size: 1.285rem
     &__number
       display: block
     &__number:hover 
@@ -188,6 +191,7 @@
       margin-top: 1.71rem
       margin-bottom: 1.71em
       margin-right: 1.5rem
+      max-width: 24px
 @media screen and ( max-width: 760px )
   .types
     padding-top: 40px
@@ -245,6 +249,9 @@
       margin-bottom: 1.85rem
 @media screen and ( max-width: 570px )
   .section
+    &__topic
+      font-size: 1.571rem
+      line-height: 138.6%
     &-title
       &__word
         &::after
@@ -256,7 +263,7 @@
         line-height: 138.6%
       &__text
         font-weight: normal
-        font-size: 1rem
+        font-size: 1.1rem
         line-height: 158.48%
         max-width: 21.785rem
   .swiper
@@ -274,10 +281,6 @@
       &-image
         max-width: 24.28rem
         margin-top: 2.571rem
-@media screen and ( max-height: 520px )
-  .hero
-    &__scroll-down
-      display: none
 @media screen and ( max-width: 520px )
   .hero
     height: 533px
@@ -318,3 +321,53 @@
       font-weight: 500
       font-size: 0.857rem
       line-height: 1rem
+@media screen and ( max-height: 520px )
+  .hero
+    &__scroll-down
+      display: none
+@media screen and ( max-height: 700px )
+  .modal
+    &__dialog
+      position: relative
+      max-width: 28rem
+      background: $dark url("../img/bg-lines.svg") no-repeat center
+      padding: 2rem 3rem 1.5rem
+      color: $light
+    &__close
+      position: absolute
+      right: 0
+      top: 0
+      width: 1.5rem
+      height: 1.5rem
+      background: transparent url("../img/close.svg") no-repeat center
+      border: none
+      margin: 12px
+      cursor: pointer
+    &__title
+      font-family: 'Yeseva One', cursive
+      font-size: 1.1rem
+      text-align: center
+      margin: 0
+      margin-bottom: 1.8rem
+    &__form
+      display: flex
+      flex-direction: column
+    &__input
+      &-group
+        position: relative
+        display: flex
+        flex-direction: column
+        margin-bottom: 1.5rem
+        &:last-of-type
+          margin-bottom: 0.5rem
+    &__policy
+      margin-bottom: 1.7rem
+  #user-name-modal-error
+    bottom: -3px
+  #user-phone-modal-error
+    bottom: -3px
+  #user-email-error
+    bottom: -3px
+  #policy-error
+    bottom: -17px
+  
