@@ -5,7 +5,29 @@
   .nav
     &__item
       margin-right: 1rem
+@media screen and ( max-width: 1400px )
+  .swiper
+    &-container
+      // width: 41rem
 @media screen and ( max-width: 992px )
+  .logo
+    &:hover 
+      color: $primary
+  .phone
+    &:hover 
+      color: $primary
+  .footer
+    &__number
+      &:hover 
+        color: $primary
+    &-link
+      box-shadow: none
+  .button
+    box-shadow: none
+@media screen and ( max-width: 992px )
+  .button
+    &-top
+      display: none
   .mobile-order-top
     order: 0
   .col-50
@@ -23,14 +45,12 @@
   .types
     &__card
       margin-bottom: 5rem
+  .design
+    &__card
+      margin-bottom: 5rem
   .swiper
-    &-slide
-      left: 0 !important
-    &-slider
-      &-image
-        max-width: 24.28rem
     &-container
-      width: 28rem
+      // width: 39rem
       margin-bottom: 3.64rem
 @media screen and ( max-width: 760px )
   .row
@@ -171,8 +191,6 @@
       max-width: 24rem
     &__number
       display: block
-      &:hover
-        display: none
     &__menu
       display: none
     &__title
@@ -188,8 +206,6 @@
     &-card
       order: 1
       margin: auto
-      &:hover
-        display: none
     &-link
       margin-top: 1.71rem
       margin-bottom: 1.71em
@@ -284,7 +300,7 @@
         max-width: 25rem
   .swiper
     &-container
-      width: 28rem
+      // width: 28rem
       margin-bottom: 3.64rem
     &-slider
       width: 100%
