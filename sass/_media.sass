@@ -23,6 +23,15 @@
   .types
     &__card
       margin-bottom: 5rem
+  .swiper
+    &-slide
+      left: 0 !important
+    &-slider
+      &-image
+        max-width: 24.28rem
+    &-container
+      width: 28rem
+      margin-bottom: 3.64rem
 @media screen and ( max-width: 760px )
   .row
     flex-direction: column
@@ -156,9 +165,10 @@
       padding-bottom: 0
     &__contact
       order: 1
-      text-align: center
+      margin: auto
       margin-top: 2rem
       font-size: 1.285rem
+      max-width: 24rem
     &__number
       display: block
       &:hover
@@ -185,6 +195,9 @@
       margin-bottom: 1.71em
       margin-right: 1.5rem
       max-width: 24px
+      box-shadow: none
+    &__phone
+      display: inline
 @media screen and ( max-width: 760px )
   .types
     padding-top: 40px
@@ -214,9 +227,8 @@
         line-height: 138.6%
       &__text
         font-weight: normal
-        font-size: 1rem
+        font-size: 1.3rem
         line-height: 158.48%
-        max-width: 21.785rem
   .contacts
     &__phone
       margin-right: 0
@@ -253,8 +265,9 @@
 @media screen and ( max-width: 570px )
   .section
     &__topic
-      font-size: 1.571rem
+      font-size: 1.9rem
       line-height: 138.6%
+      margin-bottom: 2rem
     &-title
       &__word
         &::after
@@ -266,9 +279,9 @@
         line-height: 138.6%
       &__text
         font-weight: normal
-        font-size: 1.1rem
+        font-size: 1.2rem
         line-height: 158.48%
-        max-width: 21.785rem
+        max-width: 25rem
   .swiper
     &-container
       width: 28rem
@@ -280,15 +293,16 @@
       flex-wrap: wrap
       &__heading
         font-weight: normal
-        font-size: 1rem
+        font-size: 1.13rem
         line-height: 138.6%
       &__text
-        font-size: 1rem
+        font-size: 1.13rem
         line-height: 135.84%
         margin-right: 4rem
+        margin-bottom: 1.9rem
       &__value
         font-weight: normal
-        font-size: 1rem
+        font-size: 1.2rem
         line-height: 135.84%
         margin-bottom: 1.928rem
         &:last-of-type
