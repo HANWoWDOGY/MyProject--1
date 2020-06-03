@@ -1,35 +1,58 @@
-.header
-  position: fixed
-  left: 0
-  top: 0
-  width: 100%
-  z-index: 99
-  background-color: $dark
-  padding: 24px 0
+header
+  background: url("../img/bg.jpg") no-repeat
+  height: 100vh
 .menu
   display: flex
-  justify-content: space-between
-  align-items: center
-.logo
-  color: $primary
-  font-size: 1.075rem
-  text-transform: uppercase
-  text-decoration: none
-  &:hover 
-    color: $light
-.nav
-  &__item
+  &__logo
+    display: flex
+    padding-top: 85px
+    max-width: 224px
+    letter-spacing: 2px
+  &__img
+    background-color: transparent
+    width: 4.285rem
+  &__title
     text-decoration: none
+    font-size: 2.5rem
+    margin-left: 19px
     color: $light
-    text-transform: uppercase
-    margin-right: 2.5rem
+  &__text
+    font-size: 1.2rem
+    display: block
+    letter-spacing: 1px
+  &__nav
+    margin-left: 885px
+    padding-top: 112px
+  &__preview
+    color: $light
+    font-weight: normal
+    max-width: 446px
+    font-size: 5.8rem
+    margin-left: 403px
+    margin-top: 3rem
+    line-height: 80px
+    margin-bottom: 31px
+  &__description
+    max-width: 269px
+    margin-left: 403px
+    font-size: 1.8rem
+    color: $secondary
+    line-height: 34px
+  &__item
+    margin-bottom: 165px
+.nav   
+  &__item
+    color: $light
+    margin-right: 52px
+    font-size: 1.14rem
+    text-decoration: none
+    font-family: 'OpenSans-SemiBold', sans-serif
+    &:last-of-type
+      margin-right: 0
     &:hover
-      color: $primary
-      transition: color 0.2s
-.phone
-  color: $primary
-.contacts
-  &__phone
-    margin-right: 45px
-    &:hover 
-      color: $light
+      border-bottom: 2px solid
+      padding-bottom: 18px
+    
+      
+
+    

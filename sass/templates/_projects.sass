@@ -1,53 +1,44 @@
-.projects
-  padding-bottom: 30rem
+.section-title
+  margin-top: 9.5rem
+  text-align: left
+  &__heading
+    color: $dark
+    font-size: 2rem
+    letter-spacing: -0.3px
+    line-height: 37px
+    max-width: 285px
+  &__word
+    &--primary
+      color: $primary
+  &__description
+    display: flex
+    margin-top: 73px
+    font-size: 1.3rem
+  &__text
+    margin-right: 18px
 .swiper
   &-container
-    // width: 48.5rem
-  &-slider
-    margin-top: 1.8rem
-    width: 100%
+    margin-top: 10rem
+    max-width: 792px
+  &__description
+    max-width: 270px
+    line-height: 24px
+    letter-spacing: 0.2px
+    margin-left: 2rem
+  &__text
+    margin-right: 2rem
   &-slide
-    display: flex
-    flex-wrap: wrap
-    &__text
-      flex-basis: 34%
-      margin-bottom: 1.4rem
-      &:last-of-type
-        margin-bottom: 7.14rem
-    &__heading
-      font-weight: normal
-      font-size: 1.28rem
-      line-height: 1.78rem
-      font-family: "Yeseva One", cursive
-      color: $primary
-      text-transform: uppercase
-      margin-bottom: 0.5rem
-    &__value
-      font-size: 1.071rem
-      line-height: 1.428rem
-      margin-bottom: 2.428em
-  &-pagination
-    &-bullet
-      margin: 0 7px !important
-      width: 10px
-      height: 10px
-      background-color: rgba($light, 0.3)
-      &-active
-        background-color: $light
+    justify-content: center
+    text-align: center
   &-button
     &-prev, &-next
-      bottom: 0
-      top: auto
-      background-size: 42px
-      width: 42px
-      height: 14px
+      background: url("../img/prev.svg") no-repeat center
+      width: 54px
+      height: 54px
+      margin-top: -4.4rem
       &::after
         display: none
-    &-prev
-      left: 0
-      background: url("../img/arrow-prev.svg") no-repeat center
     &-next
-      background: url("../img/arrow-next.svg") no-repeat center
-.swiper-container-horizontal>.swiper-pagination-bullets
-  width: auto
-  bottom: -2px
+      background: url("../img/next.svg") no-repeat center
+    &-prev
+      background: url("../img/prev.svg") no-repeat center
